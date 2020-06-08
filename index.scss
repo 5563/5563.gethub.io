@@ -2,32 +2,45 @@
 p {
   margin: 0;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+$mainColor:#FF5400;
 .top_search {
-  @include size(px2rem(690px),px2rem(32px));
+  @include size(px2rem(690px),px2rem(64px));
   background-color: #F2F2F2;
   border-radius:px2rem(50px);
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;  
   .icon_place, .icon_moredown ,.place_show{
-    color: #FF5400;
+    color: $mainColor;
   }
 
   .icon_place{
+    margin-left: px2rem(30px);
     font-size: px2rem(24px);
   }
 
   .place_show {
+    margin: 0 px2rem(12px);
     font-size: px2rem(28px);
   }
 
   .icon_moredown {
-
-    
-    font-size: 0.5px;
+    // font-size: 0.5px;
+    transform: scale(0.5);
     font-weight: 100;
+    font-size: px2rem(12px);
+    margin-right: px2rem(13px);
   // @include size(px2rem(10px),px2rem(8px));
 
+  }
+  .icon_search {
+    color: #C3C3C3;
+    margin-right: px2rem(17px);
   }
   .search_type {
     width: px2rem(400px);
@@ -45,21 +58,21 @@ p {
   display: flex;
   flex-direction: row;
   // flex-wrap: nowrap;
+ margin-top: px2rem(50px);
   .menu_icon {
 
-   @include size(px2rem(110px),px2rem(130px));
-    
+   flex-grow: 1;
+    width: px2rem(110px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: px2rem(20px);
     text-align: center;
     .menu_img{
       @include size(px2rem(90px),px2rem(90px));
       align-self: center;
     }
     .menu_content {
-      @include size(px2rem(110px),px2rem(24px));
+      // @include size(px2rem(110px),px2rem(24px));
       font-size: px2rem(24px);
       
     }
@@ -67,14 +80,15 @@ p {
 }
 
 .container{
-  width:px2rem(690px) ;
-  overflow: hidden;
   margin-left: px2rem(30px);
   margin-right: px2rem(30px);
+  display: flex;
+  flex-direction: column;
   .notice {
+    margin-top: px2rem(40px);
     @include size(px2rem(690px),px2rem(72px));
     background:rgba(255,255,255,1);
-    box-shadow:px2rem(0) px2rem(0) px2rem(8px) px2rem(0) rgba(0, 0, 0, 0.1);
+    box-shadow:0 0 px2rem(8px) 0 rgba(0, 0, 0, 0.1);
     border-radius:8px;
     display: flex;
     flex-direction: row;
@@ -83,15 +97,23 @@ p {
     overflow: hidden;
     .icon_loud {
       align-self: center;
+      flex-grow: 0;
+      margin: 0 px2rem(19px) 0 px2rem(20px);
+      color: $mainColor;
     }
-    .icon_gonggao
     .notice_gonggao {
-      width: px2rem(100px);
       align-self: center;
+      // align-self: center;
+      font-size: px2rem(26px);
+      flex-grow: 0;
+      white-space: nowrap;      
     }
     .notice_text {
-      width: px2rem(500px);;
-      margin: 0rem;
+      padding-left: 0;
+    //  flex-grow: 1;
+      margin: 0;  
+      flex-grow: 1;
+
 
     }
     .notice_text li{
@@ -117,14 +139,14 @@ p {
       // padding: px2rem(1px);
       position: static;
       .left_text {
-        margin: px2rem(0px);
+        margin: 0;
         font-size:px2rem(40px); 
         position: absolute;
         z-index: 2;
       }
       .rush_buy_bg {
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         @include size(px2rem(160px),px2rem(14px));
         z-index: 1;
         background:rgba(255,84,0,1);
@@ -136,9 +158,11 @@ p {
       letter-spacing: px2rem(2px);
       float: right;
       position: absolute;
-      right: 0px;
-      bottom: 0px;
+      right: 0;
+      bottom: 0;
       .time {
+        display:inline-block;
+        text-align: center;
         @include size(px2rem(40px),px2rem(28px));
         background:rgba(51,51,51,1);
         border-radius:4px;
@@ -160,10 +184,9 @@ p {
     .rush_text_title {
       font-size:px2rem(34px);
       font-weight:bold;
-      color:rgba(51,51,51,1);
-      margin-top: px2rem(25px);
+color:rgba(51,51,51,1);
+margin-top: px2rem(25px);
     }
-
     .rush_text_price {
       @include text-overflow;
       margin-top: px2rem(25px);
@@ -173,8 +196,8 @@ p {
     }
     
     .rush_price {
-      margin-top: px2rem(25px);
-      padding: 0rem;
+      margin-top: 0;
+      padding: 0;
     }
 
 
@@ -210,16 +233,15 @@ color:rgba(230,46,46,1);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: px2rem(20px);
+    @include size(px2rem(690px),px2rem(240px));
     .like_img{
       @include size(px2rem(240px),px2rem(240px));
       border-radius:20px;
+      margin-right: px2rem(26px);
     }
     .like_right {
-      width: px2rem(600px);
       display: flex;
       flex-direction: column;
-      width: px2rem(413px);
       .like_name {
         font-size:px2rem(30px);
         font-weight:bold;
@@ -228,26 +250,63 @@ color:rgba(230,46,46,1);
      
 
       .like_content {
-        @include text-overflow;
-        margin-top: px2rem(25px);
-        font-size:px2rem(26px);
-        font-weight:bold;
+        width: px2rem(413px);
+        font-size:px2rem(24px);
+        margin: px2rem(23px) 0 px2rem(25px) 0;
         color:rgba(102,102,102,1);
-        
+        @include text-overflow;
       }
 
       .like_time {
 
         font-size:px2rem(22px);
-        font-weight:bold;
-        color:rgba(102,102,102,1);
-      }
-      .like_state {
+        // font-weight:bold;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: left;
-        
+        align-items: center;
+        .progress {
+          @include size(px2rem(180px),px2rem(24px));
+          background-color: #FFC1A3;
+          border-radius:px2rem(12px);
+          position: relative; 
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          .progress_left {
+            // float: left;
+            background-color: $mainColor;
+            border-radius:px2rem(12px);
+            @include size(px2rem(50px),px2rem(24px));
+            position: absolute;
+            left: 0;
+          }
+          .progress_right {
+            // float: right;
+            color: #fff;
+            margin-right: px2rem(11px);
+            position: absolute;
+            right: 0;
+          }
+        }
+        .like_time_name {
+          margin: 0 px2rem(5px) 0 px2rem(21px);
+          font-size:px2rem(22px);
+          white-space: nowrap;
+        }
+        .like_count_down {
+          color: #E62E2E;
+          font-size:px2rem(22px);
+          white-space: nowrap;
+        }
+      }
+      .like_state {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: relative;
         .iconaddress {
           font-size:px2rem(20px);
         }
@@ -255,6 +314,32 @@ color:rgba(230,46,46,1);
           font-size:px2rem(24px);
           font-weight:bold;
           color:rgba(102,102,102,1);
+        }
+        .like_activity {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          position: absolute;
+          right: 0;
+          color: #fff;
+          // font-size: px2rem(20px);
+          .activity_recommend {
+            background-color: $mainColor;
+            font-size: px2rem(17px);
+            // height: px2rem(28px);
+            padding: px2rem(3px);
+            border-radius: px2rem(4px);
+            margin-right: px2rem(16px);
+             
+          }
+          .activity_limmit {
+            background-color: $mainColor;
+            font-size: px2rem(17px);
+            // height: px2rem(28px);
+            padding: px2rem(3px);
+            border-radius: px2rem(4px);
+          }
+
         }
       }
 
@@ -301,9 +386,11 @@ color:rgba(230,46,46,1);
   background:rgba(255,255,255,1);
   display: flex;
   flex-direction: row;
+  z-index: 999;
 
   border-top: 1px solid rgb(121, 117, 117);
   .footer_menu_one {
+    // color: $mainColor;
     flex-grow: 1;
     display: inline;
     text-align: center;
@@ -314,17 +401,28 @@ color:rgba(230,46,46,1);
       color:rgba(51,51,51,1);
     }
   }
+  .footer_menu_one:nth-child(1) {
+    color: $mainColor;
+    .footer_menu_title {
+      color: $mainColor;
+    }
+  }
 }
 
 
 .swiper-container {
   margin: px2rem(20px) 0;
   @include size(px2rem(660px),px2rem(300px));
-  border-radius:20px;
-  z-index: 999;
+  border-radius:px2rem(20px);
+}
+.container_end {
+ margin-bottom: px2rem(150px);
+ margin-top: px2rem(49px);
+ font-size: px2rem(24px);
+ color:rgba(153,153,153,1);
+ align-self: center;
 }
 
-
-.bottom {
-  margin-bottom: px2rem(1008px);
+.you_like {
+  margin-bottom: px2rem(45px);
 }

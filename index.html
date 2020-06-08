@@ -1,165 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./lwb/resize.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <link href="./index.min.css" type="text/css" rel="stylesheet" />
+    <link href="http://at.alicdn.com/t/font_1594285_nsqd48r9ab8.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/css/swiper.min.css" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <title>phoneHtml</title>
+  </head>
+  <body>
+    <header class="top_search">
+      <i class="iconfont icondizhi icon_place"></i>
 
-<head>
-  <meta charset="UTF-8">
-  <script src="./lwb/resize.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-  <link href="./index.min.css" type="text/css" rel="stylesheet" />
-  <link href="http://at.alicdn.com/t/font_1594285_nsqd48r9ab8.css" type="text/css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/js/swiper.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/css/swiper.min.css">
-  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-  <script src="./index.js"></script>
-  <title>phoneHtml</title>
-</head>
-
-<body>
-  <header class="top_search">
-    <i class="iconfont icondizhi icon_place"></i>
-
-    <span class="place_show">全国站</span>
-    <i class="iconfont iconsanjiaoxingx icon_moredown"></i>
-    <span class="cut_line"></span>
-    <i class="iconfont iconsousuo icon_search"></i>
-    <input type="search" class="search_type" placeholder="三台山森林公园">
-
-
-  </header>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"> <img src="./lwb/images/img2.png" class="middle_img"></div>
-      <div class="swiper-slide"> <img src="./lwb/images/img2.png" class="middle_img"></div>
-      <div class="swiper-slide"> <img src="./lwb/images/img2.png" class="middle_img"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <div class="menu">
-    <div class="menu_icon">
-      <img src="https://cdn.caomall.net/15831273211034897975.png" class="menu_img">
-      <p class="menu_content">景点/门票</p>
-    </div>
-    <div class="menu_icon">
-      <img src="https://cdn.caomall.net/158312733283050726.png"" class=" menu_img">
-      <p class="menu_content">酒店+景点</p>
-    </div>
-    <div class="menu_icon">
-      <img src="https://cdn.caomall.net/15831273451406769661.png" class="menu_img">
-      <p class="menu_content">一日游</p>
-    </div>
-    <div class="menu_icon">
-      <img src="https://cdn.caomall.net/15831273571367667905.png" class="menu_img">
-      <p class="menu_content">自驾游</p>
-    </div>
-    <div class="menu_icon">
-      <img src="https://cdn.caomall.net/1583127374897424276.png" class="menu_img">
-      <p class="menu_content">跟团游</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="notice">
-      <i class="iconfont icongonggao icon_loud"> </i>
-      <p class="notice_gonggao"> 公告：</p>
-      <ul class="notice_text">
-        <li>第1条公告第1条公告第1条公告第1条公告第1条公告第1条公告</li>
-        <li>第2条公告第2条公告第2条公告第2条公告第2条公告第2条公告</li>
-        <li>第3条公告第3条公告第3条公告第3条公告第3条公告第3条公告</li>
-        <li>第4条公告第4条公告第4条公告第4条公告第4条公告第4条公告</li>
-      </ul>
-    </div>
-    <div class="rush_buy">
-      <div class="rush_buy_left">
-        <p class="left_text">精彩抢购</p>
-        <span class="rush_buy_bg"></span>
+      <span class="place_show">全国站</span>
+      <i class="iconfont iconsanjiaoxingx icon_moredown"></i>
+      <span class="cut_line"></span>
+      <i class="iconfont iconsousuo icon_search"></i>
+      <input type="search" class="search_type" placeholder="三台山森林公园" />
+    </header>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./lwb/images/img2.png" class="middle_img" /></div>
+        <div class="swiper-slide"><img src="./lwb/images/img2.png" class="middle_img" /></div>
+        <div class="swiper-slide"><img src="./lwb/images/img2.png" class="middle_img" /></div>
       </div>
-      <div class="rush_buy_right">
-        距离结束<span id="day">6</span>天<span id="hour" class="time">24</span>:<span id="minute"
-          class="time">59</span>:<span id="second" class="time">59</span>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="menu">
+      <div class="menu_icon">
+        <img src="https://cdn.caomall.net/15831273211034897975.png" class="menu_img" />
+        <p class="menu_content">景点/门票</p>
+      </div>
+      <div class="menu_icon">
+        <img src="https://cdn.caomall.net/158312733283050726.png"" class="menu_img">
+        <p class="menu_content">酒店+景点</p>
+      </div>
+      <div class="menu_icon">
+        <img src="https://cdn.caomall.net/15831273451406769661.png" class="menu_img" />
+        <p class="menu_content">一日游</p>
+      </div>
+      <div class="menu_icon">
+        <img src="https://cdn.caomall.net/15831273571367667905.png" class="menu_img" />
+        <p class="menu_content">自驾游</p>
+      </div>
+      <div class="menu_icon">
+        <img src="https://cdn.caomall.net/1583127374897424276.png" class="menu_img" />
+        <p class="menu_content">跟团游</p>
       </div>
     </div>
-    <div class="rush_text">
-      <img src="./lwb/images/img2.png" class="middle_img">
-      <p class="rush_text_title">跨年烟火大会 常州环球动漫嬉戏谷</p>
-      <p class="rush_text_price">圣诞、元旦福利大放送，亲子年卡低至499，亲子三人年.dssafsasdfasdfasdfasdfasdfasd..</p>
-      <p class="rush_price"><span class="rush_price1">￥</span><span class="rush_price2">99</span><span
-          class="rush_price3">.99</span><span class="rush_price4">起</span><span class="rush_price5">原价¥169起</span></p>
-    </div>
-    <div class="rush_buy" >
-      <div class="rush_buy_left">
-        <p class="left_text">猜你喜欢</p><span class="rush_buy_bg"></span>
+    <div class="container">
+      <div class="notice">
+        <i class="iconfont icongonggao icon_loud"> </i>
+        <p class="notice_gonggao">公告：</p>
+        <ul class="notice_text">
+          <li>第1条公告第1条公告第1条公告第1条公告第1条公告第1条公告</li>
+          <li>第2条公告第2条公告第2条公告第2条公告第2条公告第2条公告</li>
+          <li>第3条公告第3条公告第3条公告第3条公告第3条公告第3条公告</li>
+          <li>第4条公告第4条公告第4条公告第4条公告第4条公告第4条公告</li>
+        </ul>
       </div>
-    </div>
-    <div class="like">
-      <img src="./lwb/images/img3.png" class="like_img">
-      <div class="like_right">
-        <p class="like_name">双蛋特惠南京弘扬未来世界</p>
-        <p class="like_content">圣诞、元旦福利大放送，亲子年</p>
-        <div class="like_time">
-          <p>4天18:59:59</p>
+      <div class="rush_buy">
+        <div class="rush_buy_left">
+          <p class="left_text">精彩抢购</p>
+          <span class="rush_buy_bg"></span>
         </div>
-        <p class="like_price"><span class="like_price1">￥</span><span class="like_price2">99</span><span
-            class="like_price3">.99</span><span class="like_price4">起</span><span class="like_price5">原价¥169起</span></p>
-        <div class="like_state" style="display: flex; flex-direction: row;">
-          <i class="iconfont iconaddress "></i>
-          <p class="adress">南京</p>
+        <div class="rush_buy_right">
+          距离结束<span id="day">6</span>天<span id="hour" class="time">24</span>:<span id="minute" class="time"
+            >59</span
+          >:<span id="second" class="time">59</span>
         </div>
       </div>
-    </div>
-    <hr>
-    <div class="like">
-      <img src="./lwb/images/img3.png" class="like_img">
-      <div class="like_right">
-        <p class="like_name">双蛋特惠南京弘扬未来世界</p>
-        <p class="like_content">圣诞、元旦福利大放送，亲子年</p>
-        <div class="like_time">
-          <p>4天18:59:59</p>
-        </div>
-        <p class="like_price"><span class="like_price1">￥</span><span class="like_price2">99</span><span
-            class="like_price3">.99</span><span class="like_price4">起</span><span class="like_price5">原价¥169起</span></p>
-        <div class="like_state" style="display: flex; flex-direction: row;">
-          <i class="iconfont iconaddress "></i>
-          <p class="adress">南京市</p>
+      <div class="rush_text">
+        <img src="./lwb/images/img2.png" class="middle_img" />
+        <p class="rush_text_title">跨年烟火大会 常州环球动漫嬉戏谷</p>
+        <p class="rush_text_price">圣诞、元旦福利大放送，亲子年卡低至499，亲子三人年adsfasdf.adsf..</p>
+        <p class="rush_price">
+          <span class="rush_price1">￥</span><span class="rush_price2">99</span><span class="rush_price3">.99</span
+          ><span class="rush_price4">起</span><span class="rush_price5">原价¥169起</span>
+        </p>
+      </div>
+      <div class="rush_buy you_like" ">
+        <div class="rush_buy_left">
+          <p class="left_text" >猜你喜欢</p>
+          <span class="rush_buy_bg"></span>
         </div>
       </div>
-    </div>
-    <hr>
-    <div class="like">
-      <img src="./lwb/images/img3.png" class="like_img">
-      <div class="like_right" >
-        <p class="like_name">双蛋特惠南京弘扬未来世界</p>
-        <p class="like_content">圣诞、元旦福利大放送，亲子年卡</p>
-        <div class="like_time">
-          <p>4天18:59:59</p>
-        </div>
-        <p class="like_price"><span class="like_price1">￥</span><span class="like_price2">99</span><span
-            class="like_price3">.99</span><span class="like_price4">起</span><span class="like_price5">原价¥169起</span></p>
-        <div class="like_state" style="display: flex; flex-direction: row;">
-          <i class="iconfont iconaddress "></i>
-          <p class="adress">南京市</p>
+      <div class="like">
+        <img src="./lwb/images/img3.png" class="like_img" />
+        <div class="like_right">
+          <p class="like_name">双蛋特惠南京弘扬未来世界</p>
+          <p class="like_content">圣诞、元旦福利大放送adsadffasdfasdfasdf，亲</p>
+          <div class="like_time">
+            <div class="progress">
+              <div class="progress_left"></div>
+              <p class="progress_right">30</p>
+            </div>
+            <p class="like_time_name">距结束 </p>
+            <p class="like_count_down">4天18:59:59</p>
+          </div>
+          <p class="like_price">
+            <span class="like_price1">￥</span><span class="like_price2">99</span><span class="like_price3">.99</span
+            ><span class="like_price4">起</span><span class="like_price5">原价¥169起</span>
+          </p>
+          <div class="like_state">
+            <i class="iconfont iconaddress "></i>
+            <p class="adress">南京市</p>
+            <div class="like_activity">
+                <p class="activity_recommend">超值推荐</p>
+                <p class="activity_limmit">限时特价</p>
+              </div>
+          </div>
         </div>
       </div>
+      <hr />
+      <div class="like">
+        <img src="./lwb/images/img3.png" class="like_img" />
+        <div class="like_right">
+          <p class="like_name">双蛋特惠南京弘扬未来世界</p>
+          <p class="like_content">圣诞、元旦福利大放送，亲</p>
+          <div class="like_time">
+            <div class="progress">
+              <div class="progress_left"></div>
+              <p class="progress_right">30</p>
+            </div>
+            <p class="like_time_name">距结束 </p>
+            <p class="like_count_down">4天18:59:59</p>
+          </div>
+          <p class="like_price">
+            <span class="like_price1">￥</span><span class="like_price2">99</span><span class="like_price3">.99</span
+            ><span class="like_price4">起</span><span class="like_price5">原价¥169起</span>
+          </p>
+          <div class="like_state">
+            <i class="iconfont iconaddress "></i>
+            <p class="adress">南京市</p>
+            <div class="like_activity">
+              <p class="activity_recommend">超值推荐</p>
+              <p class="activity_limmit">限时特价</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="like">
+        <img src="./lwb/images/img3.png" class="like_img" />
+        <div class="like_right">
+          <p class="like_name">双蛋特惠南京弘扬未来世界</p>
+          <p class="like_content">圣诞、元旦福利大放送，亲子</p>
+          <div class="like_time">
+            <div class="progress">
+              <div class="progress_left"></div>
+              <p class="progress_right">30</p>
+            </div>
+            <p class="like_time_name">距结束 </p>
+            <p class="like_count_down">4天18:59:59</p>
+          </div>
+          <p class="like_price">
+            <span class="like_price1">￥</span><span class="like_price2">99</span><span class="like_price3">.99</span
+            ><span class="like_price4">起</span><span class="like_price5">原价¥169起</span>
+          </p>
+          <div class="like_state">
+            <i class="iconfont iconaddress "></i>
+            <p class="adress">南京市</p>
+            <div class="like_activity">
+                <p class="activity_recommend">超值推荐</p>
+                <p class="activity_limmit">限时特价</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <p class="container_end">草帽科技提供技术支持</p>
     </div>
-    <div class="bottom" style="margin-bottom: 120px;" >
-      <p>草帽科技</p>
-    </div>
-
-  </div>
-  <footer class="footer_menu">
-    <div class="footer_menu_one">
-      <i class="iconfont iconshouye  icon_footer_menu"></i>
-      <p class="footer_menu_title">首页</p>
-    </div>
-    <div class="footer_menu_one">
-      <i class="iconfont iconqianggou  icon_footer_menu"></i>
-      <p class="footer_menu_title">限时抢购</p>
-    </div>
-    <div class="footer_menu_one">
-      <i class="iconfont iconwo  icon_footer_menu"></i>
-      <p class="footer_menu_title"> 我的</p>
-    </div>
-  </footer>
-</body>
-
+    <footer class="footer_menu">
+      <div class="footer_menu_one">
+        <i class="iconfont iconshouye-xuanze  icon_footer_menu"></i>
+        <p class="footer_menu_title">首页</p>
+      </div>
+      <div class="footer_menu_one">
+        <i class="iconfont iconqianggou  icon_footer_menu"></i>
+        <p class="footer_menu_title">限时抢购</p>
+      </div>
+      <div class="footer_menu_one">
+        <i class="iconfont iconwo  icon_footer_menu"></i>
+        <p class="footer_menu_title">我的</p>
+      </div>
+    </footer>
+  </body>
 </html>
